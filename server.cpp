@@ -78,6 +78,7 @@ int main(int argc, char **argv)
 
     // creating server
     rpc::server server(port);
+    server.suppress_exceptions(true);
     // driver setting
     server.bind("get_driver", Driver::Get);
     server.bind("set_driver", Driver::Set);

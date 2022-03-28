@@ -1,6 +1,4 @@
-#include <CLI/App.hpp>
-#include <CLI/Config.hpp>
-#include <CLI/Formatter.hpp>
+#include "CLI11.hpp"
 #include <iostream>
 #include <rpc/server.h>
 #include <rpc/this_handler.h>

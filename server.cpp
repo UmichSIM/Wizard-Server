@@ -43,13 +43,13 @@ int Get()
 
 namespace Wheel
 {
-uint16_t pos = 32768;
+double pos = 1;
 
 /**
  * @brief set the wheel position
- * @param pos: wheel position
+ * @param pos: wheel position ranging from [-1,1]
  **/
-void Set(uint16_t pos)
+void Set(double pos)
 {
     Wheel::pos = pos;
 }
@@ -58,7 +58,7 @@ void Set(uint16_t pos)
  * @brief get the wheel position
  * @return wheel position
  **/
-uint16_t Get()
+double Get()
 {
     return Wheel::pos;
 }
@@ -85,7 +85,8 @@ int main(int argc, char **argv)
     server.bind("set_wheel", Wheel::Set);
 
     // run
-    std::cout << "Server starts listening on port " << port << "..." << std::endl;
+    std::cout << "Server starts listening on port " << port << "..."
+              << std::endl;
     server.run();
 
     return 0;

@@ -2,6 +2,44 @@
 
 Additional server for exchanging information between clients.
 
+## Usage
+
+Just run the program and the server will bind to the specific port (default `2003`).
+
+```bash
+./bin/wizard-server [-p port]
+```
+
+
+
+## Build
+
+This is a one file small project and can be compiled using `cmake`
+
++ install `cmake`
+
+```bash
+# ubuntu
+sudo apt install cmake
+```
+
++ configure and compile
+
+```bash
+mkdir build; cd build
+cmake ..
+cd ..
+cmake --build ./build
+```
+
++ the executable lies in the `bin` folder
+
+```bash
+./bin/wizard-server
+```
+
+
+
 ## APIs
 
 + get_driver: get the current driver
